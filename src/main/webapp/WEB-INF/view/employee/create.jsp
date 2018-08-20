@@ -3,8 +3,21 @@
 <html>
 <head>
     <title>Create a new employee</title>
+    <style>
+        fieldset {
+            width: 500px;
+            margin: 150px auto;
+        }
+
+        h3 {
+            color: cornflowerblue;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+<fieldset>
+    <legend>Create new employee ID</legend>
 <h3>Welcome, Enter The Employee Details</h3>
 <form:form method="POST" action="addEmployee" modelAttribute="employee">
     <table>
@@ -25,5 +38,6 @@
         </tr>
     </table>
 </form:form>
+</fieldset>
 </body>
 </html>
