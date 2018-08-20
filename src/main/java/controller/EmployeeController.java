@@ -13,6 +13,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class EmployeeController {
 
     @RequestMapping(value = "showform", method = RequestMethod.GET)
+    public String showForm(ModelMap model) {
+        model.addAttribute("employee", new Employee());
+        return "employee/create";
+    }
+
+    @RequestMapping(value = "/addEmployee", method = RequestMethod.POST)
     public String submit(@ModelAttribute("employee") Employee employee, BindingResult result, ModelMap model) {
         model.addAttribute("name", employee.getName());
         model.addAttribute("contactNumber", employee.getContactNumber());
